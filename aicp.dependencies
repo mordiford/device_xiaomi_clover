@@ -1,0 +1,22 @@
+[
+ {
+   "repository": "MoKee/android_vendor_xiaomi_miuicamera",
+   "target_path": "vendor/xiaomi/MiuiCamera",
+   "branch": "mkp"
+ },
+ {
+   "repository": "GuaiYiHu/android_vendor_xiaomi_clover",
+   "target_path": "vendor/xiaomi/clover",
+   "branch": "mkp"
+ },
+ {
+   "repository": "GuaiYiHu/android_kernel_xiaomi_clover",
+   "target_path": "kernel/xiaomi/clover",
+   "branch": "mkp"
+ },
+ {
+   "repository": "LineageOS/android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings",
+   "branch": "lineage-16.0"
+ }
+]

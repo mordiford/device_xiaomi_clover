@@ -23,11 +23,11 @@ $(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/clover.mk)
 # Inherit from clover device
 $(call inherit-product, device/xiaomi/clover/device.mk)
 
-# Inherit some common Mokee stuff.
-$(call inherit-product, vendor/mk/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, vendor/mk/config/telephony.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/aicp/config/common_apn.mk)
 
-PRODUCT_NAME := mk_clover
+PRODUCT_NAME := aicp_clover
 PRODUCT_BRAND := Xiaomi
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_DEVICE := clover
