@@ -28,35 +28,7 @@
         android:label="@string/display_title"
         android:theme="@style/AppTheme">
 
-        <!-- Device Settings -->
-        <activity
-            android:name=".DeviceSettingsActivity"
-            android:label="@string/display_title">
-            <intent-filter>
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_panel_tile" />
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
-            <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/display_summary" />
-        </activity>
-
         <activity android:name=".DeviceSettings" />
-
-        <activity
-            android:name="org.lineageos.settings.DisplayMode.PanelSettingsActivity"
-            android:exported="true"
-            android:label="@string/panel_category_title"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <receiver android:name="org.lineageos.settings.DisplayMode.Startup" >
             <intent-filter android:priority="100" >
@@ -64,26 +36,5 @@
             </intent-filter>
         </receiver>
 
-        <!-- Quick Settings Tiles -->
-        <service
-            android:name="org.lineageos.settings.DisplayMode.PanelModeTileService"
-            android:icon="@drawable/ic_panel_tile"
-            android:label="@string/tile_panel_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="org.lineageos.settings.DisplayMode.HBMModeTileService"
-            android:icon="@drawable/ic_hbm_tile"
-            android:label="@string/tile_hbm_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
     </application>
 </manifest>
