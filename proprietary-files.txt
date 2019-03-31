@@ -622,7 +622,9 @@ vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9
 lib/vendor.qti.esepowermanager@1.0.so|e65ad704bb73308ddc7eabeeaf46b8d8a3f57f4c
 lib64/vendor.qti.esepowermanager@1.0.so|1662a45073eb48f9682975289ba87e314e6edec8
 vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|ffa61e2f9f5305fa91d9f3a6ed2ee366ae8bf413
+vendor/lib/vendor.qti.esepowermanager@1.0.so|e65ad704bb73308ddc7eabeeaf46b8d8a3f57f4c
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|5061bb7675b5ad6a8ba8e2090c8c8a15cf83aebc
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|1662a45073eb48f9682975289ba87e314e6edec8
 
 # Fingerprint sensor
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
