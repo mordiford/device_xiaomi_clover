@@ -21,30 +21,35 @@
 # definition file).
 #
 
-# Inherit device configuration
-$(call inherit-product, device/xiaomi/clover/device.mk)
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
-# Inherit Carbon product configuration
-$(call inherit-product, vendor/carbon/config/common.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# CarbonRom Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carbon.maintainer="Rcstar6696"
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/telephony.mk)
+
+# Inherit from clover device
+$(call inherit-product, device/xiaomi/clover/device.mk)
 
 # Device identifier
+PRODUCT_DEVICE := clover
+PRODUCT_NAME := lineage_clover
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := carbon_clover
 PRODUCT_CHARACTERISTICS := tablet
-PRODUCT_DEVICE := clover
-PRODUCT_MODEL := MI PAD 4
+PRODUCT_MODEL := Mi Pad 4
 
-# Build Fingerprint
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="clover-user 8.1.0 OPM1.171019.019 9.7.4 release-keys"
+    TARGET_DEVICE="clover" \
+    PRODUCT_NAME="clover" \
+    BUILD_FINGERPRINT="Xiaomi/clover/clover:8.1.0/OPM1.171019.019/V10.2.1.0.ODJCNXM:user/release-keys" \
+    PRIVATE_BUILD_DESC="clover-user 8.1.0 OPM1.171019.019 V10.2.1.0.ODJCNXM release-keys"
+
+TARGET_VENDOR := Xiaomi
